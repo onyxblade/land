@@ -20,3 +20,11 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+  vite:
+    image: node:24-slim
+    working_dir: /vite
+    volumes:
+      - ./frontend:/vite
+    command: sh -c "npm i; npm run dev"
+    ports:
+      - "5173:5173"

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import endpoints from './endpoints';
+console.log(await endpoints.spaces.show({id: 1}))
 </script>
 
 <template>
