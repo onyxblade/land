@@ -86,8 +86,6 @@ production:
   primary: &primary_production
     <<: *default
     database: land_production
-    username: land
-    password: <%= ENV["MAILBREAKER_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
     database: land_production_cache
